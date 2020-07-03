@@ -5,11 +5,11 @@
       color="red accent-4"
       dark
     >
-    France Coaching
+    Fabien En Forme
     <v-btn class="mx-4" :to="{name: 'Home'}">Accueil</v-btn>
     <v-spacer></v-spacer>
-    <v-btn class="mx-4" :to="{name: 'EspaceCoach'}">Espace coach</v-btn>
-    <v-btn class="mx-4" :to="{name: 'EspaceMembre'}">Espace membre</v-btn>
+    <v-btn class="mx-4" :to="{name: 'EspaceCoach'}" color="red">Espace coach</v-btn>
+    <v-btn class="mx-4" :to="{name: 'EspaceMembre'}" color="blue darken-4">Espace membre</v-btn>
     <v-btn class="mx-4" :to="{name: 'About'}">À propos</v-btn>
     </v-app-bar>
     <v-main>
