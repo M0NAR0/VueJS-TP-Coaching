@@ -2,6 +2,7 @@
     <div>
         <h1>Rapport quotidien</h1>
         <v-alert v-if="coachMessage" type="success">{{ coachMessage }}</v-alert>
+        <v-alert v-if="reportSendMessage" type="success">{{ reportSendMessage }}</v-alert>
         <v-row>
             <v-col cols="12" sm="4">
                 <h2>Physique</h2>
@@ -15,6 +16,10 @@
                 <v-select v-model="petitDejeuner" :items="repasList" label="Petit-déjeuner" ></v-select>
                 <v-select v-model="dejeuner" :items="repasList" label="Déjeuner" ></v-select>
                 <v-select v-model="diner" :items="repasList" label="Dîner" ></v-select>
+                <v-checkbox
+                    v-model="collation"
+                    label="Une collation ?"
+                ></v-checkbox>
             </v-col>
             <v-col cols="12" sm="4">
                 <h2>Psychologique</h2>
@@ -50,11 +55,31 @@
                 humeur: "",
                 observations: "",
                 coachMessage: "",
+                reportSendMessage: "",
             }
         },
         methods: {
             sendReport() {
-                alert("Rapport envoyé !");
+                const report = {
+                    //memberId: this.memberId,
+                    sportPratique: this.sportPratique,
+                    sportDuree: this.sportDuree,
+                    sportIntensite: this.sportIntensite,
+                    poids: this.poids,
+                    petitDejeuner: this.petitDejeuner,
+                    dejeuner: this.dejeuner,
+                    diner: this.diner,
+                    collation: this.collation,
+                    humeur: this.humeur,
+                    observations: this.observations
+                };
+                try {
+                    this.axios.post(process.env.VUE_APP_API_URL + "/reports", report);
+                    this.reportSendMessage = "Rapport envoyé avec succès !";
+                } catch (error) {
+                    alert("Erreur !");
+                    console.log("erreur", error);
+                }
             }
         },
     }
