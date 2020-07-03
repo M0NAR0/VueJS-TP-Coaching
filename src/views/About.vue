@@ -2,6 +2,7 @@
   <div class="about">
     <h1>This is an about page</h1>
       <Contact />
+      <v-divider></v-divider>
       <LegalMentions />
   </div>
 </template>
@@ -9,7 +10,7 @@
 <script>
   import Contact from '@/components/Contact.vue';
   import LegalMentions from '@/components/LegalMentions.vue';
-  
+
   export default {
     components: {
       Contact,
