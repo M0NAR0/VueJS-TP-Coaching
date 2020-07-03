@@ -5,7 +5,7 @@
       color="red accent-4"
       dark
     >
-    OnlineCoachingFrance
+    France Coaching
     <v-btn class="mx-4" :to="{name: 'Home'}">Accueil</v-btn>
     <v-spacer></v-spacer>
     <v-btn class="mx-4" :to="{name: 'EspaceCoach'}">Espace coach</v-btn>

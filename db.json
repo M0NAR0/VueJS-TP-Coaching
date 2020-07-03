@@ -4,19 +4,26 @@
             "id": 1,
             "login": "admin",
             "password": 1234,
+            "lastname": "GRIGNIOUX",
+            "firstname": "Fabien",
             "isCoach": true
         },
         {
             "id": 2,
             "login": "member1",
             "password": 4321,
+            "lastname": "SCHWARZENEGGER",
+            "firstname": "Arnold",
             "isCoach": false
         },
         {
             "id": 3,
             "login": "member2",
             "password": 1423,
+            "lastname": "STALONE",
+            "firstname": "Sylvester",
             "isCoach": false
         }
-    ]
+    ],
+    "reports": []
 }
