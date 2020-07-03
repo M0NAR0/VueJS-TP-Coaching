@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>Rapport quotidien</h1>
+        <v-alert v-if="coachMessage" type="success">{{ coachMessage }}</v-alert>
         <v-row>
             <v-col cols="12" sm="4">
                 <h2>Physique</h2>
@@ -48,6 +49,7 @@
                 collation: false,
                 humeur: "",
                 observations: "",
+                coachMessage: "",
             }
         },
         methods: {
