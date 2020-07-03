@@ -21,8 +21,12 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-spacer></v-spacer>
-            <v-btn @click="sendReport" color="success">Envoyer</v-btn>
+            <v-col cols="12" sm="8">
+                <v-textarea v-model="observations" label="Observations" ></v-textarea>
+            </v-col>
+            <v-col cols="12" sm="4">
+                <v-btn @click="sendReport" color="success">Envoyer</v-btn>
+            </v-col>
         </v-row>
     </div>
 </template>
@@ -43,6 +47,7 @@
                 diner: "",
                 collation: false,
                 humeur: "",
+                observations: "",
             }
         },
         methods: {
