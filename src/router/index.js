@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home'
+import EspaceMembre from '@/views/EspaceMembre'
+import EspaceCoach from '@/views/EspaceCoach'
 
 Vue.use(VueRouter)
 
@@ -9,6 +11,16 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/coach',
+    name: 'EspaceCoach',
+    component: EspaceCoach
+  },
+  {
+    path: '/membre',
+    name: 'EspaceMembre',
+    component: EspaceMembre
   },
   {
     path: '/about',
