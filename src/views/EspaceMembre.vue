@@ -22,7 +22,7 @@
         </v-row>
         <v-row>
             <v-spacer></v-spacer>
-            <v-btn color="success">Envoyer</v-btn>
+            <v-btn @click="sendReport" color="success">Envoyer</v-btn>
         </v-row>
     </div>
 </template>
@@ -43,6 +43,11 @@
                 diner: "",
                 collation: false,
                 humeur: "",
+            }
+        },
+        methods: {
+            sendReport() {
+                alert("Rapport envoyé !");
             }
         },
     }
